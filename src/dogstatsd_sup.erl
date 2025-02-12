@@ -10,7 +10,7 @@ init(_Args) ->
     Children = [
                 #{
                    id => dogstatsd_worker_pool,
-                   start => {wpool, start_pool, [dogstatsd_worker, [{worker, {dogstatsd_worker, []}}, {workers, 10}]]},
+                   start => {wpool, start_pool, [dogstatsd_worker, [{worker, {dogstatsd_worker, []}}, {workers, 192}]]},
                    restart => permanent,
                    shutdown => infinity,
                    type => supervisor,
